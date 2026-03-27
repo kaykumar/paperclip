@@ -86,6 +86,17 @@ export async function createApp(
     },
   }));
   app.use(httpLogger);
+  // Health endpoint must be reachable before the hostname guard so that
+  // cloud health checkers (e.g. Railway) can probe it without a recognised Host header.
+  app.use(
+    "/api/health",
+    healthRoutes(db, {
+      deploymentMode: opts.deploymentMode,
+      deploymentExposure: opts.deploymentExposure,
+      authReady: opts.authReady,
+      companyDeletionEnabled: opts.companyDeletionEnabled,
+    }),
+  );
   const privateHostnameGateEnabled =
     opts.deploymentMode === "authenticated" && opts.deploymentExposure === "private";
   const privateHostnameAllowSet = resolvePrivateHostnameAllowSet({
