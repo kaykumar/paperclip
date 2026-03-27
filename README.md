@@ -15,6 +15,10 @@
   <a href="https://discord.gg/m4HZY7xNG3"><img src="https://img.shields.io/discord/000000000?label=discord" alt="Discord" /></a>
 </p>
 
+<p align="center">
+  <a href="https://railway.com/new/template?template=https://github.com/kaykumar/paperclip&envs=BETTER_AUTH_SECRET,BETTER_AUTH_BASE_URL&BETTER_AUTH_SECRETDesc=Authentication+secret+key+(generate+with%3A+openssl+rand+-hex+32)&BETTER_AUTH_SECRETDefault=&BETTER_AUTH_BASE_URLDesc=Your+public+URL+once+deployed+(e.g.+https%3A%2F%2Fyourapp.up.railway.app)&BETTER_AUTH_BASE_URLDefault="><img src="https://railway.com/button.svg" alt="Deploy on Railway" /></a>
+</p>
+
 <br/>
 
 <div align="center">
